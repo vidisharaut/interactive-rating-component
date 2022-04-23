@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: hsl(216, 12%, 8%);
+  min-height: 100vh;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.container {
+  width: 350px;
+  background-image: linear-gradient(hsl(213, 19%, 15%), hsl(213, 19%, 12%));
+  border-radius: 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.centre {
+  align-items: center;
+}
+.centre p {
+  text-align: center;
+}
+.selected-rating {
+  background-color: hsl(216, 12%, 22%);
+  padding: 5px 20px;
+  border-radius: 20px;
+  color: hsl(25, 97%, 53%);
+  margin: 35px 0;
+}
+.star {
+  width: min-content;
+  background-color: hsla(216, 12%, 54%, 0.137);
+  padding: 15px;
+  border-radius: 50px;
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+p {
+  font-size: 15px;
+  color: hsl(219, 9%, 64%);
+  line-height: 22px;
+  margin: 15px 0;
+}
+ul {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+}
+li {
+  background-color: hsla(216, 12%, 54%, 0.137);
+  padding: 15px 20px;
+  border-radius: 50px;
+  color: hsl(217, 12%, 63%);
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+button {
+  padding: 15px 20px;
+  border-radius: 30px;
+  color: #fff;
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: hsl(25, 97%, 53%);
+  background-color: #fff;
+}
+li:hover {
+  color: #fff;
+  background-color: hsl(25, 97%, 53%);
+}
+
+.active {
+  background-color: hsl(216, 12%, 54%);
+  color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    border-radius: 15px;
   }
 }
